@@ -32,6 +32,7 @@ public class SpartanWithXML extends SpartanAuthTestBase {
                     .statusCode(200)
                     .contentType("application/xml;charset=UTF-8") //we verify we got xml through header
                     .body("List.item[0].name",is("Paige"))
+                    //hamcrest.Matchers.*; bu bize buldugumuz bilgileri karsilastiyor  buradki is ise esittir anlaminda
                     .body("List.item[0].gender",is("Female"))
                     .log().all();
     }
